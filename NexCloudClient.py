@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from ProxyCloud import ProxyCloud
 
 import socket
-#import socks
+import socks
 
 import S5Crypto
 
@@ -90,12 +90,3 @@ class NexCloudClient(object):
         if resp.status_code == 409:
             retData = {'upload':False,'msg':'Not ' + user + ' Folder Existent!','name':filepath}
         return retData
-
-
-#proxy = ProxyCloud('181.225.253.17',4545)
-#client = NexCloudClient('cvgonzalez','pusipo-759',proxy=proxy)
-#loged = client.login()
-#if loged:
-#    client.upload_file('requirements.txt')
-#    print('loged')
-#    pass
